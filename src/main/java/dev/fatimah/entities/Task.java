@@ -13,7 +13,7 @@ public class Task {
 	private int priority ;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="id")
+	@Column(name="ID")
 	private int taskId ; 
 	
 	

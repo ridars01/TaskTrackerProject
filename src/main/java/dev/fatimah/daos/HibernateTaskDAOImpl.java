@@ -12,7 +12,7 @@ import dev.fatimah.entities.Task;
 import dev.fatimah.utils.HibernateUtil;
 
 public class HibernateTaskDAOImpl implements TaskDAO {
-
+//CREATE TASK
 	@Override
 	public Task createTask(Task task) {
 		try(Session session = HibernateUtil.getSession(); ){
@@ -26,16 +26,18 @@ public class HibernateTaskDAOImpl implements TaskDAO {
 			
 		}
 	}
-
+//GET ALL TASKS 
 	@Override
 	public Set<Task> getAllTasks() {
 		try(Session session = HibernateUtil.getSession();){
-			Query<Task> taskQuery = session.createQuery("from task");
+			Query<Task> taskQuery = session.createQuery("from Task");
 			List<Task> taskList = taskQuery.list(); 
+			System.out.println("Query List size: "+ taskList.size());
 			return new HashSet<>(taskList) ;
 		}
 	}
 
+	//DELETE TASK BY ID 
 	@Override
 	public Task deleteTaskById(int taskId) {
 		try(Session session = HibernateUtil.getSession();){
@@ -50,6 +52,25 @@ public class HibernateTaskDAOImpl implements TaskDAO {
 			return task; 
 		}
 		
+	}
+//GET TASK BY ID 
+	@Override
+	public Task getTaskbyId(int taskId) {
+	try(Session session = HibernateUtil.getSession()){
+		Task t = session.get(Task.class, taskId) ; 
+		
+		return t ; 
+	}
+	}
+	//UPDATE
+	@Override 
+	public Task updateTask(Task task) {
+		try(Session session = HibernateUtil.getSession()){
+			Transaction tx = session.beginTransaction() ; 
+			Task updatedTask = (Task) session.merge(task);
+			tx.commit();
+			return updatedTask;
+		}
 	}
 
 	

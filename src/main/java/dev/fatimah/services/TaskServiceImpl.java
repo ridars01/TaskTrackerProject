@@ -2,13 +2,14 @@ package dev.fatimah.services;
 
 import java.util.Set;
 
+import dev.fatimah.daos.HibernateTaskDAOImpl;
 import dev.fatimah.daos.TaskDAO;
 import dev.fatimah.daos.TaskDAOImpl;
 import dev.fatimah.entities.Task;
 
 public class TaskServiceImpl implements TaskService{
 
-	private static TaskDAO tdao = new TaskDAOImpl(); 
+	private static TaskDAO tdao = new 	HibernateTaskDAOImpl(); 
 	
 	@Override
 	public Task addTask(Task task) {
@@ -27,5 +28,26 @@ public class TaskServiceImpl implements TaskService{
 		Set<Task> tasks = tdao.getAllTasks() ; 
 		return tasks;
 	}
+
+
+	@Override
+	public Task deleteTask(int taskId) {
+		Task deleteTask = tdao.deleteTaskById(taskId) ; 
+		return deleteTask;
+	}
+
+	@Override
+	public Task updateTask(Task task) {
+		tdao.updateTask(task) ; 
+		return task ; 
+	}
+
+	@Override
+	public Task getTaskById(int taskId) {
+		Task t = tdao.getTaskbyId(taskId) ; 
+		return t ; 
+	}
+
+	
 
 }

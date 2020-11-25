@@ -69,6 +69,20 @@ public class TaskDAOImpl implements TaskDAO{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+	@Override
+	public Task getTaskbyId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Task updateTask(Task task) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	}
 

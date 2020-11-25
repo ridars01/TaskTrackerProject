@@ -40,8 +40,7 @@ public class TaskDAOTests {
 	
 	@Test
 	public void deleteTaskTest() {
-	Task  deleteTask = tdao.deleteTaskById(1);
-	System.out.println(deleteTask); 
+	Task  deleteTask = tdao.deleteTaskById(2);
 	System.out.println("The Task has been deleted");
 	}
 
