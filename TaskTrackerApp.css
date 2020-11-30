@@ -50,7 +50,7 @@ body{font-family: Georgia, 'Times New Roman', Times, serif;} */
     border-bottom: double 5px black ; 
 }
 .input-style{
-    border-radius: 25px;
+     border-radius: 25px;
     width:450px ; 
     border-color: #BC8F8F  ; 
     /* border-color: #003F87; */

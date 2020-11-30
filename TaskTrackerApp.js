@@ -30,7 +30,7 @@ async function addTask() {
 
     const settings = {method: 'POST' , body:JSON.stringify(task)}
 
-    const httpResponse = await fetch('http://localhost:8080/TaskTrackerAppOne/tasks/' , settings) ; 
+    const  httpResponse = await fetch('http://localhost:8080/TaskTrackerAppOne/tasks/' , settings) ; 
 
     alert('Task added !!')
 
