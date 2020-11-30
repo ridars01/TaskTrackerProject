@@ -11,9 +11,9 @@
 		<id name="taskId" column="id">
 			<generator class="increment"></generator>
 		</id>
-		<property name="task"></property>
-		<property name="description"></property>
-		<property name="priority"></property>
+		<property name="task" column = "task"></property>
+		<property name="description" column = "description"></property>
+		<property name="priority" column = "priority"></property>
 
 	</class>
 

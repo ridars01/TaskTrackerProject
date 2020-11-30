@@ -1,6 +1,8 @@
 package dev.fatimah.services;
 
+import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import dev.fatimah.daos.HibernateTaskDAOImpl;
 import dev.fatimah.daos.TaskDAO;
@@ -25,7 +27,7 @@ public class TaskServiceImpl implements TaskService{
 
 	@Override
 	public Set<Task> retrieveAllTasks() {
-		Set<Task> tasks = tdao.getAllTasks() ; 
+		Set<Task> tasks = tdao.getAllTasks() ;
 		return tasks;
 	}
 
@@ -47,6 +49,20 @@ public class TaskServiceImpl implements TaskService{
 		Task t = tdao.getTaskbyId(taskId) ; 
 		return t ; 
 	}
+
+	@Override
+	public Set<Task> filterById(int filter) {
+		Set<Task> orderTasks = new HashSet<Task>(); 
+		Set<Task> allTasks = this.retrieveAllTasks() ; 
+		
+		for(Task t : allTasks) {
+			if(t.getTaskId() > filter) {
+				orderTasks.add(t);
+				}
+			}
+		
+		return orderTasks; 
+		}
 
 	
 

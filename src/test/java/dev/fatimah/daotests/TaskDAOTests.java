@@ -16,32 +16,32 @@ public class TaskDAOTests {
 
 	private static TaskDAO tdao = new HibernateTaskDAOImpl();
 	
-	@Test
-	public void createTaskTest() {
-		Task task = new Task("Social Studies Assignment" , "research paper" , 7 ,0) ; 
-		tdao.createTask(task) ; 
-		System.out.println(task);
-		Assert.assertNotEquals(task.getTaskId() , 0);
-	}
-	
-	@Test
-	public void createTaskTest2() {
-		Task task = new Task("Math Assignmnet" , "pages 3-4 ODD" , 5 ,0) ; 
-		tdao.createTask(task) ; 
-		System.out.println(task);
-		Assert.assertNotEquals(task.getTaskId() , 0);
-	}
+//	@Test
+//	public void createTaskTest() {
+//		Task task = new Task("Social Studies Assignment" , "research paper" , 7 ,0) ; 
+//		tdao.createTask(task) ; 
+//		System.out.println(task);
+//		Assert.assertNotEquals(task.getTaskId() , 0);
+//	}
+//	
+//	@Test
+//	public void createTaskTest2() {
+//		Task task = new Task("Math Assignmnet" , "pages 3-4 ODD" , 5 ,0) ; 
+//		tdao.createTask(task) ; 
+//		System.out.println(task);
+//		Assert.assertNotEquals(task.getTaskId() , 0);
+//	}
 
-	@Test
-	public void getAllTasks() {
-		Set<Task> tasks = tdao.getAllTasks() ;
-		System.out.println (tasks);
-	}
-	
-	@Test
-	public void deleteTaskTest() {
-	Task  deleteTask = tdao.deleteTaskById(2);
-	System.out.println("The Task has been deleted");
-	}
+//	@Test
+//	public void getAllTasks() {
+//		Set<Task> tasks = tdao.getAllTasks() ;
+//		System.out.println (tasks);
+//	}
+//	
+//	@Test
+//	public void deleteTaskTest() {
+//	Task  deleteTask = tdao.deleteTaskById(8);
+//	System.out.println("The Task has been deleted");
+//	}
 
 }

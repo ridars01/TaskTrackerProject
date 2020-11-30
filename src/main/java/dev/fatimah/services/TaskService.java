@@ -10,6 +10,8 @@ public interface TaskService {
 	
 	Set<Task> retrieveAllTasks(); 
 	
+	Set<Task>filterById(int filter) ; 
+	
 //	Task updateTask(Task task); 
 	
 	Task deleteTask(int taskId) ; 

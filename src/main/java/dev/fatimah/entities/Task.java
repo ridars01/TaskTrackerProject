@@ -6,14 +6,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+import org.hibernate.annotations.OrderBy;
+import org.hibernate.annotations.SortNatural;
+
+/*@Entity*/
 public class Task {
 	private String task ; 
 	private String description ; 
 	private int priority ;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="ID")
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.AUTO)
+//	@Column(name="ID")
+	
+//	@SortNatural
 	private int taskId ; 
 	
 	

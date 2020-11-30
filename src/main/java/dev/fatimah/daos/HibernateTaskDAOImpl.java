@@ -30,9 +30,15 @@ public class HibernateTaskDAOImpl implements TaskDAO {
 	@Override
 	public Set<Task> getAllTasks() {
 		try(Session session = HibernateUtil.getSession();){
-			Query<Task> taskQuery = session.createQuery("from Task");
+			
+			Transaction tx = session.beginTransaction();
+			
+			Query<Task> taskQuery = session.createQuery("from Task order by id  ASC");
 			List<Task> taskList = taskQuery.list(); 
-			System.out.println("Query List size: "+ taskList.size());
+			
+			
+			tx.commit();
+			//System.out.println("Query List size: "+ taskList.size());
 			return new HashSet<>(taskList) ;
 		}
 	}
