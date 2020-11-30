@@ -1,0 +1,109 @@
+.grid-container{
+    display: grid;
+    /* grid-template-columns: 1fr 0.7fr 1.3fr 1fr; */
+
+    /* grid-template-columns: auto auto auto auto; */
+    /* grid-template-rows: 0.5fr 1.9fr 0.6fr; */
+    /* gap: 1em 3em ;  */
+    /* grid-template-areas: 
+    "title title title title"
+    "Task-tracker Task-tracker Task-tracker"
+    "........."; */
+
+    grid-template-columns: 750px auto ; 
+}
+.grid-item{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    /* font-size: 30px; */
+    text-align: center;
+}
+/* .title{grid-area: title; }
+.Task-tracker{grid-area: Task-tracker ;}
+.Task-table{grid-area: Task-table ;}
+
+body{font-family: Georgia, 'Times New Roman', Times, serif;} */
+
+.header{
+    font-family: 'Great Vibes', cursive;
+    color: #fff ; 
+    font-weight: bold;
+    letter-spacing: 3px;
+    /* background-color: #E6E6FA; */
+    background-color: #34495e;
+    height: 100px ; 
+    margin-top: 0 ; 
+    text-align: center;
+    font-size: 70px;
+    padding-top:20px ;
+}
+.sub-header{
+    font-family: 'Old Standard TT', serif;
+    color: #BC8F8F ; 
+    text-align: center;
+    padding-top: 15px ;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    border-top: double 5px black ; 
+    border-bottom: double 5px black ; 
+}
+.input-style{
+    border-radius: 25px;
+    width:450px ; 
+    border-color: #BC8F8F  ; 
+    /* border-color: #003F87; */
+    border-width: 3px;
+    
+}
+.input-headers{
+    /* font-family: 'Old Standard TT', serif; */
+    font-family: 'Squada One', cursive;
+    font-weight: bold ; 
+    font-size: 25px; 
+}
+
+.btn-1{
+/* float:right; */
+
+border:0;
+background-color:#34495e;
+color:#fff;
+padding:12px 30px;
+margin-top:10px ; 
+border-radius:20px;
+}
+.table-title{
+    font-family: 'Old Standard TT', serif;
+    font-weight:bold ; 
+    font-size: 17px; 
+}
+.table-header-row{
+    background-color: #34495e ;
+    color: white ; 
+    font-size: 16px;;
+    border: #BC8F8F solid 5px ;
+}
+.Task-table{
+    height:50px ; 
+    /* width:900px ;  */
+    /* margin:150px ;  */
+   
+  
+
+}
+
+
+.table-row-style{
+font-size: 14px ; 
+font-family: 'Old Standard TT', serif;
+font-weight: bold ; 
+
+}
+
+
+
+
+
+

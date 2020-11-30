@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel = "stylesheet"href = "TaskTrackerApp.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+
+
+
+<link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+
+</head>
+<body>
+   
+        <div class = "title">
+            <h1 class = "header">Task Tracker App</h1>
+            <h5 class = "sub-header">Create your to-do list for today ! </h5>
+        </div>
+
+        <div>
+<div class = "grid-container ">
+
+    <div class="grid-item">
+        <img src = "imgs/quillPen.jpg">
+        </div>
+
+
+<div class="grid-item">
+        <div class = "Task-tracker">
+            <h4 class = "input-headers">Your Task</h4>
+            <!-- <label for ="taskInput" >Your Task</label> -->
+            <input id = "taskInput" class = "input-style" type = "text" placeholder="                                       Complete Assignments....">
+<hr>
+            <h4 class = "input-headers"> Add a task description</h4>
+            <!-- <label for ="descriptionInput">description</label> -->
+            <input id = "descriptionInput"  class = "input-style" type = "text" placeholder="                                                Due in 5 hours .....">
+
+            <hr>
+
+            <h4 class = "input-headers">Add a task priority 1-10:</h4>
+            <!-- <label for="priorityInput">Priority level</label> -->
+            <input id = "priorityInput" class = "input-style" type = "number" placeholder = "                                                         2">
+            <div>
+            <button onClick = "addTask()" class = "btn-1">Add Task</button>
+            </div>
+            <hr>
+
+            <h4 class = "input-headers">Delete By Id# : </h4>
+            <!-- <label for="deleteInput">Delete By Id</label> -->
+            <input id = "deleteInput" class = "input-style" type = "number">
+            <div>
+            <button onClick="deleteTask()" class = "btn-1">Delete ! </button>
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+
+    <div class = "Task-table">
+        <table id = "taskTable" class = "table table-striped"></table>
+       
+    </div>
+
+</div>
+
+</body>
+
+<script src = "TaskTrackerApp.js"></script>
+
+</html>
