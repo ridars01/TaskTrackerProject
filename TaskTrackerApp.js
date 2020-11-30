@@ -11,7 +11,7 @@ async function viewTasks(){
         // onclick = "deleteTask()"
     }
 
-    const taskTable = document.getElementById("taskTable") ; 
+     const taskTable = document.getElementById("taskTable") ; 
     taskTable.innerHTML = tableHead + tableRows ; 
 }
 
